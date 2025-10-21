@@ -15,7 +15,7 @@ function ProductCard({ product }) {
   return (
     <div className="product-card">
       <img 
-        src={product.imageUrl} 
+        src={`${import.meta.env.BASE_URL}${product.imageUrl.startsWith('/') ? product.imageUrl.substring(1) : product.imageUrl}`} 
         alt={product.name} 
         className="product-image"
       />
