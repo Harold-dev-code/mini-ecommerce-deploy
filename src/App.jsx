@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import ProductList from './pages/ProductList';
 import ShoppingCart from './pages/ShoppingCart';
@@ -6,7 +6,7 @@ import ThankYouPage from './pages/ThankYouPage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       {/* El Header se renderiza en todas las páginas, fuera de <Routes> */}
       <Header />
       <main className="container mx-auto p-4"> 
@@ -26,7 +26,7 @@ function App() {
           <Route path="*" element={<h1>404: Página no encontrada</h1>} /> 
         </Routes>
       </main>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
