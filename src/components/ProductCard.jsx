@@ -15,7 +15,7 @@ function ProductCard({ product }) {
   return (
     <div className="product-card">
       <img 
-        src={`/img/${product.imageUrl}`} 
+        src={product.imageUrl} 
         alt={product.name} 
         className="product-image"
       />
